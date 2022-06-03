@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello UserController!{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="col-md-6 mx-auto my-4">
+    <h1 class="text-center text-muted my-3" >Editer un user</h1>
+    {{ form_start(form) }}
+        <div class="row">
+            <div class="col-6">
+                {{ form_row(form.nom) }}
+            </div>
+            <div class="col-6">
+                {{ form_row(form.prenom) }}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">{{ form_row(form.email) }}</div>
+            <div class="col-6">{{ form_row(form.tel) }}</div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                {{ form_row(form.adresse) }}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-8">
+                {{ form_row(form.ville) }}
+            </div>
+            <div class="col-4">
+                {{ form_row(form.cp) }}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">{{ form_row(form.salaire) }}</div>
+            <div class="col-6">{{ form_row(form.service) }}</div>
+        </div>
+
+         <div class="row">
+            <div class="col">
+                {{ form_row(form.date_naissance) }}
+            </div>
+        </div>
+    <input type="submit" value="ajouter" class='btn btn-dark' >
+    {{ form_end(form) }}
+    </div>
+</div>
+
+{% endblock %}

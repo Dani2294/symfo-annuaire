@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TwigController!{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+            <th scope="col">Nom</th>
+            <th scope="col">Prenom</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+            <th scope="row">{{ user['name'] }}</th>
+            <td>{{ user['prenom'] }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

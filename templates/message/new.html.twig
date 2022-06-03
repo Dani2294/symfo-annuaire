@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Message{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-8 mx-auto">
+		<a href="{{ path('app_message_index') }}" class="btn btn-dark my-4">Retour aux messages</a>
+
+        <h1>Créer un nouveau message</h1>
+
+		{{ include('message/_form.html.twig') }}
+
+        </div>
+
+    </div>
+{% endblock %}
